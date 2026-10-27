@@ -81,7 +81,7 @@ class RoundFactory {
       case RoundKind.avoidColor:
         final bad = palette[r.nextInt(palette.length)];
         final others = palette.where((p) => p != bad).toList();
-        final n = min(6, 3 + score ~/ 6);
+        final int n = min<int>(6, 3 + score ~/ 6);
         final badCount = n >= 5 ? 2 : 1;
         final ts = <Target>[];
         for (var i = 0; i < n; i++) {
@@ -130,7 +130,7 @@ class RoundFactory {
         );
 
       case RoundKind.wrongAnswer:
-        final range = 8 + min(score, 12);
+        final int range = 8 + min<int>(score, 12);
         final a = 2 + r.nextInt(range);
         final b = 2 + r.nextInt(range);
         final correct = a + b;
