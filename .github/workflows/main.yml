@@ -36,7 +36,4 @@ jobs:
           name: antitap-apk
           path: build/app/outputs/flutter-apk/app-profile.apk
           retention-days: 3
-        with:
-          name: antitap-apk
-          path: build/app/outputs/flutter-apk/app-profile.apk
-          retention-days: 3
+        
